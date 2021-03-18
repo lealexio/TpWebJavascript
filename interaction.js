@@ -79,34 +79,47 @@ function getMousePosition(can,evt) {
 function removeElement(id){
   pencil.removeElement(id);
 };
-//Event listener for element remove
+//Event listener for canvas clear
 function clearGraph(){
   pencil.clearElements();
 };
 
-//Event listener for element remove
+//Event listener for remove last element
 function undo(){
   pencil.undoElements();
 };
 
+//Event listener for initX update
 function updateinitX(id) {
   pencil.updateinitX(id);
 };
+
+//Event listener for initY update
 function updateinitY(id) {
   pencil.updateinitY(id);
 };
+
+//Event listener for finalX update
 function updatefinalX(id) {
   pencil.updatefinalX(id);
 };
+
+//Event listener for finalY update
 function updatefinalY(id) {
   pencil.updatefinalY(id);
 };
+
+//Event listener for size update
 function updateSize(id) {
   pencil.updateSize(id);
 };
+
+//Event listener for colour update
 function updateColour(id) {
   pencil.updateColour(id);
 };
+
+//Event listener for randomColor button
 function randomColor(id) {
   pencil.randomColor(id);
 };
