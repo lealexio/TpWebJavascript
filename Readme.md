@@ -12,6 +12,14 @@ All the design has been made with Boostrap, the stylesheet is only used to displ
 
 The release isn't responsive and work only on computers.
 
-#MVC
+#Features
 
 The pattern MVC is used to edit and get interaction with user.
+
+User can draw line, rectangle and circles.
+
+He can choose the color and the size of each shape.
+
+At the right of the screen, a menu show drawn shapes, its possible to edit them and generate random colors.
+
+At the top, a toolbar allow shape creation, a button allow to remove the lst drawn shape and another to clear the Canvas.
