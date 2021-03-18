@@ -1,12 +1,12 @@
 
-// Implémenter ici les fonctions paint à ajouter dans chacune des classes du modèle.
 
+//Clear Canvas method
 MyForm.prototype.clear = function(ctx) {
     canvas.getContext('2d').fillStyle = '#F0F0F0'; // set canvas' background color
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 };
 
-
+//Draw rectangle method
 Rectangle.prototype.paint = function(ctx) {
     ctx.lineWidth = this.getEpaisseur();
     ctx.strokeStyle=this.getCouleur();
@@ -15,6 +15,7 @@ Rectangle.prototype.paint = function(ctx) {
     ctx.stroke();
 };
 
+//Draw line method
 Line.prototype.paint = function(ctx) {
     ctx.lineWidth = this.getEpaisseur();
     ctx.strokeStyle=this.getCouleur();
@@ -24,6 +25,7 @@ Line.prototype.paint = function(ctx) {
     ctx.stroke();
 };
 
+//Draw circle method
 Circle.prototype.paint = function(ctx) {
     ctx.lineWidth = this.getEpaisseur();
     ctx.strokeStyle=this.getCouleur();
@@ -33,7 +35,7 @@ Circle.prototype.paint = function(ctx) {
     ctx.stroke();
 };
 
-
+//Paint actual shape
 Drawing.prototype.paint = function(ctx) {
     ctx.fillStyle = '#f0f0f0'; // set canvas' background color
     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -41,6 +43,7 @@ Drawing.prototype.paint = function(ctx) {
         eltDuTableau.paint(ctx); });
 };
 
+//Update shape list with append new element in list-group.
 function updateShapeList(items){
     $('#shapeList').empty();
     items.forEach(function(item){

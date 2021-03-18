@@ -1,11 +1,11 @@
 var canvas = document.getElementById('myCanvas');
 var ctx = canvas.getContext('2d');
 
+//Set size of Canvas
 canvas.width = document.getElementById('leftArea').scrollWidth;
 canvas.height = document.body.scrollHeight-document.getElementById("navigationBar").scrollHeight-7;
 
 
-// Code final à utiliser pour manipuler Pencil.
 var drawing = new Drawing();
 var pencil = new Pencil(ctx, drawing, canvas);
 drawing.paint(ctx, canvas);

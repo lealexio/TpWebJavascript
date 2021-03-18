@@ -6,6 +6,7 @@ body{
 }
 
 .list-group{
+    /* 100vh is the height of th window, 54px is the size of Boostrap toolbar*/
     height: calc( 100vh - 54px);
     width: 100%;
     overflow-y: scroll;

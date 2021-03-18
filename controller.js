@@ -1,14 +1,9 @@
 
-//var editingMode = { rect: 0, line: 1 };
 
 function Pencil(ctx, drawing, canvas) {
 	this.currentShape = 0;
 	this.ctx = ctx;
-
-	// Liez ici les widgets à la classe pour modifier les attributs présents ci-dessus.
-
 	new DnD(canvas, this);
-
 
 	this.onInteractionStart = function(dnd) {
 		if (document.getElementById("butRect").checked){
@@ -102,6 +97,7 @@ function Pencil(ctx, drawing, canvas) {
 		updateDraw();
 	}
 
+	//Generate random colors
 	this.randomColor = function (id){
 		console.log("update color of "+id);
 		var letters = '0123456789ABCDEF';
@@ -111,8 +107,9 @@ function Pencil(ctx, drawing, canvas) {
 		}
 		drawing.getForm(id).couleur=''+color;
 		updateDraw();
-
 	}
+
+	//Update Canvas
 	function updateDraw() {
 		drawing.paint(this.ctx);
 		updateShapeList(drawing.getForms());

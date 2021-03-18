@@ -1,8 +1,4 @@
 
-// La création d'un Dnd requière un canvas et un interacteur.
-// L'interacteur viendra dans un second temps donc ne vous en souciez pas au départ.
-
-
 function DnD(boundingObject, interactor) {
   this.initX = 0;
   this.initY = 0;
